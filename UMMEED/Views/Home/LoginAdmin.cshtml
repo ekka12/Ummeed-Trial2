@@ -1,0 +1,27 @@
+@{
+    string role = ViewData["AdminRole"] as string ;
+}
+
+
+<html>
+
+    <meta>
+    <head>
+
+    </head>
+
+    <Div align = "Left">@TempData["message"]
+        
+        <h3><u>PLease Enter Your Credentials</u></h1></Div>
+    <body align="center">
+           
+        <form action="/Home/LoginAdmin" method="POST">
+            <input type="hidden" name="role" id="role" value="@role"/>
+           USER NAME : <input type="text" name="uname" id="uname" required="true" placeholder="Enter your uid"/>
+           PassWord  : <input type="password" name="password" id="password" required="true" placeholder="Enter your pwd"/>
+          
+           <button type="submit" name="btn" id="btn">Login</button>
+        
+        </form>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+@using BOL;
+@{
+    ChildSts ch = ViewData["Child"] as ChildSts;
+}
+
+<html>
+    <meta>
+    <head>
+
+    </head>
+    <body>
+         <form action="/Home/ChildStatus" method="get">
+           <div><h3><u>Welcome To Your Status Page</u></h3></div>
+            <table class="table">
+                <tr>
+                    <th>
+                        Child Id 
+                    </th>
+                    <th>
+                        Child Name
+                    </th>
+                    <th>
+                         Paid Amount
+                    </th>
+                    <th>
+                        Child key
+                    </th>
+                </tr>
+                @{
+                    while(true){
+                        <tr>
+                            <td>
+                                @ch.Chid
+                            </td>
+                            <td>
+                                @ch.Chname
+                            </td>
+                            <td>
+                                @ch.Payment
+                            </td>
+                            <td>
+                                @ch.Chkey
+                            </td>
+                        </tr>
+                        break ;
+                    }
+                }
+            </table>
+         </form>
+    </body>
+</html>

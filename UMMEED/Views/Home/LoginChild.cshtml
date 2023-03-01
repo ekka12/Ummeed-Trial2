@@ -1,0 +1,26 @@
+@{
+    string role1 = ViewData["ChildRole"] as string ;
+}
+<html>
+
+    <meta>
+    <head>
+
+    </head>
+
+    <Div align = "Left">@TempData["message"]
+        
+        <h3><u>PLease Enter Your Credentials</u></h1></Div>
+    <body align="center">
+               
+        <form action="/Home/LoginChild" method="post">
+            <input type="hidden" name="role1" id="role1" value="@role1"/>
+           User id   : <input type="number" name="uid" id="uid" required="true" placeholder="Enter your uid"/>
+           USER NAME : <input type="text" name="uname" id="uname" required="true" placeholder="Enter your user name"/>
+           PassWord  : <input type="password" name="password" id="password" required="true" placeholder="Enter your pwd"/>
+          
+           <button type="submit" name="btn" id="btn">Login</button>
+        
+        </form>
+    </body>
+</html>
